@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:padding="10dp"
+            android:text="@string/myName"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/barrier1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.03" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="me" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="mother,father" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="grandMother2,
+                                        grandMother1,
+                                        grandFather2,
+                                        grandFather1" />
+
+
+        <TextView
+            android:id="@+id/mother"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/orange"
+            android:padding="5dp"
+            android:text="@string/motherName"
+            android:textColor="@color/white"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier1" />
+
+        <TextView
+            android:id="@+id/father"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="184dp"
+            android:background="@color/orange"
+            android:padding="5dp"
+            android:text="@string/fatherName"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier1" />
+
+        <TextView
+            android:id="@+id/grandFather2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="96dp"
+            android:background="@color/strong_yellow"
+            android:padding="5dp"
+            android:text="@string/grandFather2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/grandMother2"
+            app:layout_constraintTop_toBottomOf="@+id/barrier2" />
+
+        <TextView
+            android:id="@+id/grandMother2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:background="@color/strong_yellow"
+            android:padding="5dp"
+            android:text="@string/grandMother2"
+            app:layout_constraintEnd_toStartOf="@+id/grandFather2"
+            app:layout_constraintTop_toTopOf="@+id/grandFather2" />
+
+        <TextView
+            android:id="@+id/grandFather1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/yellow"
+            android:padding="5dp"
+            android:text="@string/grandFather1"
+            app:layout_constraintStart_toEndOf="@+id/grandMother1"
+            app:layout_constraintTop_toTopOf="@+id/grandMother1" />
+
+        <TextView
+            android:id="@+id/grandMother1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="28dp"
+            android:background="@color/yellow"
+            android:padding="5dp"
+            android:text="@string/grandMother1"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintRight_toLeftOf="@id/grandFather1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier2" />
+
+        <TextView
+            android:id="@+id/greatMother1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/green"
+            android:padding="5dp"
+            android:text="@string/grGrandMother1"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/greatFather1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier3" />
+
+        <TextView
+            android:id="@+id/greatFather1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="@color/green"
+            android:padding="5dp"
+            android:text="@string/grGrandFather1"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/greatMother1"
+            app:layout_constraintTop_toTopOf="@+id/greatMother1" />
+
+        <TextView
+            android:id="@+id/greatMother2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/green"
+            android:padding="5dp"
+            android:text="@string/grGrandMother2"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/greatFather1"
+            app:layout_constraintTop_toBottomOf="@+id/barrier3" />
+
+        <TextView
+            android:id="@+id/greatFather2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/green"
+            android:padding="5dp"
+            android:text="@string/grGrandFather2"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/greatMother2"
+            app:layout_constraintTop_toTopOf="@+id/greatMother2" />
+
+        <TextView
+            android:id="@+id/greatMother3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@color/aqua_green"
+            android:padding="5dp"
+            android:text="@string/grGrandMother3"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/greatFather3"
+            app:layout_constraintTop_toTopOf="@+id/greatFather3" />
+
+        <TextView
+            android:id="@+id/greatFather3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="116dp"
+            android:background="@color/aqua_green"
+            android:padding="5dp"
+            android:text="@string/grGrandFather3"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/greatMother4"
+            app:layout_constraintRight_toLeftOf="@id/greatMother3"
+            app:layout_constraintTop_toTopOf="@+id/barrier3" />
+
+        <TextView
+            android:id="@+id/greatMother4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@color/aqua_green"
+            android:padding="5dp"
+            android:text="@string/grGrandMother4"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/greatFather4"
+            app:layout_constraintTop_toTopOf="@+id/greatFather4" />
+
+        <TextView
+            android:id="@+id/greatFather4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="@color/aqua_green"
+            android:padding="5dp"
+            android:text="@string/grGrandFather4"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier3" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="greatMother1,greatFather1,
+                                       greatMother2,greatFather2,
+                                       greatMother3,greatFather3,
+                                       greatMother4,greatFather4" />
+
+        <TextView
+            android:id="@+id/greatGreatGrandMother1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="68dp"
+            android:background="@color/aqua"
+            android:text="@string/grGrGrandMother1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier4" />
+
+        <TextView
+            android:id="@+id/greatGreatGrandFather1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/aqua"
+            android:text="@string/grGrGrandFather1"
+            app:layout_constraintStart_toEndOf="@+id/greatGreatGrandMother1"
+            app:layout_constraintTop_toTopOf="@+id/greatGreatGrandMother1" />
+
+        <TextView
+            android:id="@+id/greatGreatGrandMother2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:background="@color/blue"
+            android:text="@string/grGrGrandMother2"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/greatGreatGrandFather2"
+            app:layout_constraintTop_toTopOf="@+id/greatGreatGrandFather2" />
+
+        <TextView
+            android:id="@+id/greatGreatGrandFather2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="60dp"
+            android:background="@color/blue"
+            android:text="@string/grGrGrandFather2"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

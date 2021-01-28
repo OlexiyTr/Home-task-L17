@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Home-Task-17</string>
+    <string name="myName">Me</string>
+    <string name="motherName">Mother</string>
+    <string name="fatherName">Father</string>
+    <string name="grandMother1">GrandMother1</string>
+    <string name="grandFather1">GrandFather1</string>
+    <string name="grandMother2">GrandMother2</string>
+    <string name="grandFather2">GrandFather2</string>
+    <string name="grGrandMother1">Gr.GrandMother1</string>
+    <string name="grGrandFather1">Gr.GrandFather1</string>
+    <string name="grGrandMother2">Gr.GrandMother2</string>
+    <string name="grGrandFather2">Gr.GrandFather2</string>
+    <string name="grGrandMother3">Gr.GrandMother3</string>
+    <string name="grGrandFather3">Gr.GrandFather3</string>
+    <string name="grGrandMother4">Gr.GrandMother4</string>
+    <string name="grGrandFather4">Gr.GrandFather4</string>
+    <string name="grGrGrandMother1">Gr.Gr.GrandMother1</string>
+    <string name="grGrGrandFather1">Gr.Gr.GrandFather1</string>
+    <string name="grGrGrandMother2">Gr.Gr.GrandMother2</string>
+    <string name="grGrGrandFather2">Gr.Gr.GrandFather2</string>
+</resources>
